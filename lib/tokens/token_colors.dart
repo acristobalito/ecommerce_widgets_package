@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Clase que contiene todos los colores base empleados por la clase [FoundationColors]
+/// Class containing all base colors used by the [FoundationColors] class.
 class TokenColors {
   static const Color errorColor = Color(0xFFFF5252);
   static const Color warningColor = Color(0xFFFFD600);
@@ -14,4 +14,5 @@ class TokenColors {
   static const Color scale05 = Color(0xFF00695C);
   static const Color scale06 = Color(0xFF004D40);
   static const Color tealColor = Color(0xFFE0F2F1);
+  static const Color greyColor = Colors.grey;
 }

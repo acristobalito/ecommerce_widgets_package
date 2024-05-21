@@ -1,18 +1,19 @@
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
-import 'package:example/presentation/widgets/menu_items_view_widget.dart';
+import 'package:example/presentation/widgets/containers/molecules_list_widget.dart';
 import 'package:flutter/material.dart';
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+class MoleculeScreen extends StatelessWidget {
+  const MoleculeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        centerTitle: false,
+        iconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: FoundationColors.primaryColor,
         title: const Text(
-          'Atomic design system example',
+          'Moléculas',
           style: TextStyle(
               color: Colors.white,
               fontSize: 18,
@@ -20,7 +21,7 @@ class MainScreen extends StatelessWidget {
               fontWeight: FontWeight.bold),
         ),
       ),
-      body: const SafeArea(child: MenuItemsViewWidget()),
+      body: const MoleculesListWidget(),
     );
   }
 }

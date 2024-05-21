@@ -1,6 +1,6 @@
 import 'package:example/config/menu_items/screens_items.dart';
-import 'package:example/presentation/screens/atom_screen.dart';
-import 'package:example/presentation/screens/molecules_screen.dart';
+import 'package:example/presentation/screens/screens.dart';
+
 import 'package:flutter/material.dart';
 
 class CustomNavigation {
@@ -9,9 +9,15 @@ class CustomNavigation {
       builder: (context) {
         switch (screen) {
           case ScreensItems.atoms:
-            return AtomScreen();
-          default:
-            return MoleculesScreen();
+            return const AtomScreen();
+          case ScreensItems.molecules:
+            return const MoleculeScreen();
+          case ScreensItems.organisms:
+            return const OrganismScreen();
+          case ScreensItems.templates:
+            return const TemplateScreen();
+          case ScreensItems.pages:
+            return const PageScreen();
         }
       },
     ));

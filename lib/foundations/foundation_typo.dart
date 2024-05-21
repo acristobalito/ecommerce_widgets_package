@@ -1,6 +1,6 @@
 import 'package:ecommerce_widgets_package/tokens/token_typo.dart';
 
-/// Clase que contiene todos la fuente a emplear en el proyecto 'Raleway'
+/// Class that contains all the fonts to be used in the 'Raleway' project
 class FoundationTypo {
   static const String font = TokenTypo.familyRaleway;
 }

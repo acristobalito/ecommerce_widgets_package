@@ -1,4 +1,4 @@
-/// Clase que contiene la fuente base empleado por la clase [FoundationTypo]
+/// Class containing the base font used by the [FoundationTypo] class
 class TokenTypo {
   static const String familyRaleway = 'Raleway';
 }

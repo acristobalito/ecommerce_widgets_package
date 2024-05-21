@@ -1,18 +1,19 @@
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
-import 'package:example/presentation/widgets/menu_items_view_widget.dart';
+import 'package:example/presentation/widgets/containers/organisms_list_widget.dart';
 import 'package:flutter/material.dart';
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+class OrganismScreen extends StatelessWidget {
+  const OrganismScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        centerTitle: false,
+        iconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: FoundationColors.primaryColor,
         title: const Text(
-          'Atomic design system example',
+          'Organismos',
           style: TextStyle(
               color: Colors.white,
               fontSize: 18,
@@ -20,7 +21,7 @@ class MainScreen extends StatelessWidget {
               fontWeight: FontWeight.bold),
         ),
       ),
-      body: const SafeArea(child: MenuItemsViewWidget()),
+      body: const OrganismsListWidget(),
     );
   }
 }
