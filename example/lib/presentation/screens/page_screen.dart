@@ -21,7 +21,7 @@ class PageScreen extends StatelessWidget {
               fontWeight: FontWeight.bold),
         ),
       ),
-      body: PageViewWidget(),
+      body: const PageViewWidget(),
     );
   }
 }

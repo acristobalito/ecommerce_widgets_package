@@ -21,7 +21,7 @@ class TemplateScreen extends StatelessWidget {
               fontWeight: FontWeight.bold),
         ),
       ),
-      body: TemplateListWidget(),
+      body: const TemplateListWidget(),
     );
   }
 }

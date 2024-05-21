@@ -1,4 +1,4 @@
-import 'package:ecommerce_widgets_package/components/molecules/text_field_form_molecule.dart';
+import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
 import 'package:flutter/material.dart';
 
 class ItemFormMoleculeSectionWidget extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:ecommerce_widgets_package/components/atoms/custom_text_atom.dart';
+import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
 import 'package:flutter/material.dart';
 
 class TypographyAtomSectionWidget extends StatelessWidget {

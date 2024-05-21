@@ -11,35 +11,33 @@ class OrganismsListWidget extends StatelessWidget {
     return const SafeArea(
       child: Padding(
         padding: EdgeInsets.all(10.0),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              CustomTextAtom(
-                text: 'NAVEGACIÓN',
-                style: TextStyle(
-                    color: FoundationColors.txtSecondaryColor,
-                    fontWeight: FontWeight.w500),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              NavigationOrganismSectionWidget(),
-              SizedBox(
-                height: 10,
-              ),
-              CustomTextAtom(
-                text: 'LISTA DE TARJETAS',
-                style: TextStyle(
-                    color: FoundationColors.txtSecondaryColor,
-                    fontWeight: FontWeight.w500),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              ListCardOrganismSectionWidget()
-            ],
-          ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CustomTextAtom(
+              text: 'NAVEGACIÓN',
+              style: TextStyle(
+                  color: FoundationColors.txtSecondaryColor,
+                  fontWeight: FontWeight.w500),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            NavigationOrganismSectionWidget(),
+            SizedBox(
+              height: 10,
+            ),
+            CustomTextAtom(
+              text: 'LISTA DE TARJETAS',
+              style: TextStyle(
+                  color: FoundationColors.txtSecondaryColor,
+                  fontWeight: FontWeight.w500),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Expanded(child: ListCardOrganismSectionWidget())
+          ],
         ),
       ),
     );

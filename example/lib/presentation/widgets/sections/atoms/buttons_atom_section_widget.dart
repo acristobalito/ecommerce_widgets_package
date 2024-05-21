@@ -18,21 +18,21 @@ class ButtonsAtomSectionWidget extends StatelessWidget {
             text: 'Iniciar sesión',
             btnStyle: const ButtonStyle(
                 backgroundColor:
-                    MaterialStatePropertyAll(FoundationColors.successBgColor)),
+                    WidgetStatePropertyAll(FoundationColors.successBgColor)),
           ),
           CustomButtonAtom(
             onClick: () {},
             text: 'Registrarse',
             btnStyle: const ButtonStyle(
                 backgroundColor:
-                    MaterialStatePropertyAll(FoundationColors.warningBgColor)),
+                    WidgetStatePropertyAll(FoundationColors.warningBgColor)),
           ),
           CustomButtonAtom(
             onClick: () {},
             text: 'Cancelar',
             btnStyle: const ButtonStyle(
                 backgroundColor:
-                    MaterialStatePropertyAll(FoundationColors.errorBgColor)),
+                    WidgetStatePropertyAll(FoundationColors.errorBgColor)),
           )
         ],
       ),
