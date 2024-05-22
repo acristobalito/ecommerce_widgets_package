@@ -12,7 +12,7 @@ class ImagesAtomSectionWidget extends StatelessWidget {
       child: const ImageAtom(
         image:
             'https://www.libreriahuequito.com/public/images/productos/default.png',
-        size: 100,
+        width: 100,
       ),
     );
   }
