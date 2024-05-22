@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 
 /// Custom login form template widget that receives [onSubmit] as parameters.
 class LoginFormWidgetTemplate extends StatelessWidget {
+  final TextStyle? textStyle;
+  final ButtonStyle? btnStyle;
   final VoidCallback onSubmit;
-  const LoginFormWidgetTemplate({super.key, required this.onSubmit});
+  const LoginFormWidgetTemplate(
+      {super.key, required this.onSubmit, this.textStyle, this.btnStyle});
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +27,19 @@ class LoginFormWidgetTemplate extends StatelessWidget {
               onChangeValue: () {},
               inputType: TextInputType.visiblePassword,
               iconForm: Icons.lock_rounded),
-          CustomButtonAtom(
-              onClick: () {
-                if (formKey.currentState!.validate()) {
-                  onSubmit.call();
-                }
-              },
-              text: 'Ingresar')
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            width: double.infinity,
+            child: CustomButtonAtom(
+                onClick: () {
+                  if (formKey.currentState!.validate()) {
+                    onSubmit.call();
+                  }
+                },
+                textStyle: textStyle,
+                btnStyle: btnStyle,
+                text: 'Ingresar'),
+          )
         ],
       ),
     );
