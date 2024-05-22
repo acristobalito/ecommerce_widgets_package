@@ -55,9 +55,11 @@ En seguida podremos tener acceso a los diferentes widgets según cada nivel de A
 **ORGANISMOS**  
 * `CardListWidgetOrganism(products:, onClickItem:);`, representa a un widget que brinda un listado de tarjetas que contienen información de un producto. Espera como argumentos: requerido `products` de tipo **List<ProductModel>** y requerido `onClickItem`.
 * `NavigationWidgetOrganism(onTap:, items:, currentIndex:);`, representa a un widget que brinda una barra de navegación personalizada. Espera como argumentos: requerido `onTap`, requerido `items` y `currentIndex`.
+  
 **PLANTILLAS**  
 * `LoginFormWidgetTemplate(onSubmit:);`, representa a un widget que brinda un formulario de loggeo. Espera como argumentos: requerido `onSubmit`.
 * `SearchViewWidgetTemplate(onSearch:, onProductClicked:, products:);`, representa a un widget que brinda una barra de busqueda y por debajo una plantilla de listado de productos. Espera como argumentos: requerido `onSearch`, requerido `onProductClicked` y requerido `products`.
+  
 **PÁGINAS**  
 * `SearchViewWidgetPage(products:, onSearch:, onProductClicked:);`, representa a un widget que muestra una barra de busqueda junto a un listado de productos. Espera como argumentos: requerido `onSearch`, requerido `onProductClicked` y requerido `products`.
   
