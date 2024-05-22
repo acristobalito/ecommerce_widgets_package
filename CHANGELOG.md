@@ -1,3 +1,7 @@
+## 0.0.4
+
+* Image atom params updated
+
 ## 0.0.3
 
 * Versión con la definicion de la versión minima del sdk de flutter y ajuste en la estructura de paquetes.
