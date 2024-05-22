@@ -1,4 +1,4 @@
-import 'package:ecommerce_widgets_package/components/atoms/custom_text_atom.dart';
+import 'package:ecommerce_widgets_package/presentation/widgets/atoms/custom_text_atom.dart';
 import 'package:flutter/material.dart';
 
 /// Custom button atom that receives [onClick], [btnStyle], [text] and [textStyle] as parameters.

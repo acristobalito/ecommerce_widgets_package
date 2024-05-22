@@ -1,4 +1,4 @@
-import 'package:ecommerce_widgets_package/components/molecules/card_item_molecule.dart';
+import 'package:ecommerce_widgets_package/presentation/widgets/molecules/card_item_molecule.dart';
 import 'package:ecommerce_widgets_package/domain/model/product_model.dart';
 import 'package:flutter/material.dart';
 

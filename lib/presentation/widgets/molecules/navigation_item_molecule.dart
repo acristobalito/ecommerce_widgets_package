@@ -1,4 +1,4 @@
-import 'package:ecommerce_widgets_package/components/atoms/icon_atom.dart';
+import 'package:ecommerce_widgets_package/presentation/widgets/atoms/icon_atom.dart';
 import 'package:flutter/material.dart';
 
 /// Navigation item widget molecule that receives [icon] and [itemName] as parameters.

@@ -1,5 +1,5 @@
-import 'package:ecommerce_widgets_package/components/atoms/custom_button_atom.dart';
-import 'package:ecommerce_widgets_package/components/molecules/text_field_form_molecule.dart';
+import 'package:ecommerce_widgets_package/presentation/widgets/atoms/custom_button_atom.dart';
+import 'package:ecommerce_widgets_package/presentation/widgets/molecules/text_field_form_molecule.dart';
 import 'package:flutter/material.dart';
 
 /// Custom login form template widget that receives [onSubmit] as parameters.

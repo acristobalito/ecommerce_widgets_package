@@ -1,4 +1,4 @@
-import 'package:ecommerce_widgets_package/components/templates/search_view_widget_template.dart';
+import 'package:ecommerce_widgets_package/presentation/widgets/templates/search_view_widget_template.dart';
 import 'package:ecommerce_widgets_package/domain/model/product_model.dart';
 import 'package:flutter/material.dart';
 

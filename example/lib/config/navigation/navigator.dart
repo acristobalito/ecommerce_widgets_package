@@ -1,22 +1,22 @@
-import 'package:example/config/menu_items/screens_items.dart';
+import 'package:example/domain/models/screens_items_model.dart';
 import 'package:example/presentation/screens/screens.dart';
 
 import 'package:flutter/material.dart';
 
 class CustomNavigation {
-  void navigate(BuildContext context, ScreensItems screen) {
+  void navigate(BuildContext context, ScreensItemsModel screen) {
     Navigator.push(context, MaterialPageRoute(
       builder: (context) {
         switch (screen) {
-          case ScreensItems.atoms:
+          case ScreensItemsModel.atoms:
             return const AtomScreen();
-          case ScreensItems.molecules:
+          case ScreensItemsModel.molecules:
             return const MoleculeScreen();
-          case ScreensItems.organisms:
+          case ScreensItemsModel.organisms:
             return const OrganismScreen();
-          case ScreensItems.templates:
+          case ScreensItemsModel.templates:
             return const TemplateScreen();
-          case ScreensItems.pages:
+          case ScreensItemsModel.pages:
             return const PageScreen();
         }
       },

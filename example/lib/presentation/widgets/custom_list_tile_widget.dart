@@ -1,9 +1,9 @@
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
-import 'package:example/config/menu_items/menu_item.dart';
+import 'package:example/domain/models/menu_item_model.dart';
 import 'package:flutter/material.dart';
 
 class CustomListTileWidget extends StatelessWidget {
-  final MenuItem menuItem;
+  final MenuItemModel menuItem;
   final VoidCallback onTap;
   const CustomListTileWidget(
       {super.key, required this.menuItem, required this.onTap});

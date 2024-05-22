@@ -1,5 +1,5 @@
-import 'package:ecommerce_widgets_package/components/atoms/custom_text_atom.dart';
-import 'package:ecommerce_widgets_package/components/atoms/icon_atom.dart';
+import 'package:ecommerce_widgets_package/presentation/widgets/atoms/custom_text_atom.dart';
+import 'package:ecommerce_widgets_package/presentation/widgets/atoms/icon_atom.dart';
 import 'package:flutter/material.dart';
 
 /// Section of rating molecule that receives [icon], [size], [spicing] and [text] as parameters.

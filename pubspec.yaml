@@ -1,11 +1,11 @@
 name: ecommerce_widgets_package
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: "E-commerce widgets package project"
+version: 0.0.3
+homepage: https://github.com/acristobalito/ecommerce_widgets_package
 
 environment:
   sdk: '>=3.3.2 <4.0.0'
-  flutter: ">=1.17.0"
+  flutter: ">=3.22.0"
 
 dependencies:
   flutter:
