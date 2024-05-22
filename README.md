@@ -25,9 +25,9 @@ Para usar el paquete, dentro del archivo pubspec.yaml agregar lo siguiente:
 dependencies:
   ...yaml
   ecommerce_widgets_package:
-  git:
-    url: https://github.com/acristobalito/ecommerce_widgets_package
-    ref: master
+    git:
+      url: https://github.com/acristobalito/ecommerce_widgets_package
+      ref: master
 ```
 
 ## Uso
