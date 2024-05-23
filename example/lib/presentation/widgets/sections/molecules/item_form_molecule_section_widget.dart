@@ -12,7 +12,7 @@ class ItemFormMoleculeSectionWidget extends StatelessWidget {
         iconForm: Icons.email_rounded,
         titleElement: 'E-mail',
         inputType: TextInputType.emailAddress,
-        onChangeValue: () {},
+        onChangeValue: (value) {},
       ),
     );
   }

@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 /// Custom text flied atom that receives [hintText], [prefixIcon], [keyBoardType], [onChangeValue] and [inputFormaters] as parameters.
 class CustomTextFieldAtom extends StatelessWidget {
   final String? hintText;
+  final String? fieldValidator;
   final TextInputType? keyBoardType;
   final Widget? prefixIcon;
   final Function(String?) onChangeValue;
@@ -15,7 +16,8 @@ class CustomTextFieldAtom extends StatelessWidget {
       this.keyBoardType,
       required this.onChangeValue,
       this.inputFormaters,
-      this.prefixIcon});
+      this.prefixIcon,
+      this.fieldValidator});
 
   @override
   Widget build(BuildContext context) {
@@ -43,8 +45,7 @@ class CustomTextFieldAtom extends StatelessWidget {
           onChangeValue.call(textController.text);
         },
         inputFormatters: inputFormaters,
-        validator: (value) => (value == null || value.isEmpty)
-            ? 'Los campos no pueden estar vacíos'
-            : null);
+        validator: (value) =>
+            (value == null || value.isEmpty) ? fieldValidator : null);
   }
 }

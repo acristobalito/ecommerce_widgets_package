@@ -7,7 +7,7 @@ class FormTemplateSectionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LoginFormWidgetTemplate(
-      onSubmit: () {},
+      onSubmit: (submit) {},
     );
   }
 }

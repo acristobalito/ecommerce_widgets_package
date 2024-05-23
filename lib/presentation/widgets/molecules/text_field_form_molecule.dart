@@ -11,8 +11,9 @@ class TextFieldFormMolecule extends StatelessWidget {
   final IconData iconForm;
   final TextInputType? inputType;
   final String? hintTextField;
+  final String? fieldValidator;
   final List<TextInputFormatter>? inputFormatter;
-  final VoidCallback onChangeValue;
+  final Function(String?) onChangeValue;
 
   const TextFieldFormMolecule(
       {super.key,
@@ -22,7 +23,8 @@ class TextFieldFormMolecule extends StatelessWidget {
       required this.onChangeValue,
       this.inputType,
       this.inputFormatter,
-      required this.iconForm});
+      required this.iconForm,
+      this.fieldValidator});
 
   @override
   Widget build(BuildContext context) {
@@ -41,10 +43,11 @@ class TextFieldFormMolecule extends StatelessWidget {
             height: 5,
           ),
           CustomTextFieldAtom(
-            onChangeValue: (value) => onChangeValue.call(),
+            onChangeValue: (value) => onChangeValue.call(value),
             hintText: hintTextField,
             keyBoardType: inputType,
             inputFormaters: inputFormatter,
+            fieldValidator: fieldValidator,
           )
         ],
       ),

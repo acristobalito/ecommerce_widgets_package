@@ -1,3 +1,7 @@
+## 0.0.6
+
+* Sign Up form template added
+
 ## 0.0.5
 
 * Button form params updated
