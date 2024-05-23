@@ -27,6 +27,7 @@ class CustomTextFieldAtom extends StatelessWidget {
         borderSide: const BorderSide(color: FoundationColors.primaryColor),
         borderRadius: BorderRadius.circular(10));
     final inputDecoration = InputDecoration(
+        fillColor: Colors.white,
         prefixIcon: prefixIcon,
         hintText: hintText,
         enabledBorder: outlinedInputBorder,

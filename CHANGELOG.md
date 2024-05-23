@@ -1,3 +1,7 @@
+## 0.0.6.1
+
+* Last name form field added
+
 ## 0.0.6
 
 * Sign Up form template added

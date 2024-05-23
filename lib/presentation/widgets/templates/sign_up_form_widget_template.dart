@@ -26,14 +26,19 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
             titleElement: 'Ingresa tu nombre',
             inputType: TextInputType.name,
             onChangeValue: (value) {
-              if (value != null) {
-                final List<String> nombres = value.split(' ');
-                firstName = nombres[0];
-                lastName = nombres.length > 1 ? nombres[1] : '';
-              }
+              firstName = value ?? '';
             },
             iconForm: Icons.person_add_alt_rounded,
             fieldValidator: 'Ingrese un nombre valido',
+          ),
+          TextFieldFormMolecule(
+            titleElement: 'Ingresa tu apellido',
+            inputType: TextInputType.name,
+            onChangeValue: (value) {
+              lastName = value ?? '';
+            },
+            iconForm: Icons.person_add_alt_rounded,
+            fieldValidator: 'Ingrese un apellido valido',
           ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa tu E-mail',
