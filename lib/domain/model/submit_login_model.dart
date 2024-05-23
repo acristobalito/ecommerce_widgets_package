@@ -1,6 +1,6 @@
 class SubmitLoginModel {
-  final String email;
+  final String userName;
   final String pass;
 
-  SubmitLoginModel({required this.email, required this.pass});
+  SubmitLoginModel({required this.userName, required this.pass});
 }

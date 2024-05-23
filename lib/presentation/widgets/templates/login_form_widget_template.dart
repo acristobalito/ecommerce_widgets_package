@@ -13,7 +13,7 @@ class LoginFormWidgetTemplate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String email = '';
+    String userName = '';
     String pass = '';
     final formKey = GlobalKey<FormState>();
     return Form(
@@ -21,14 +21,13 @@ class LoginFormWidgetTemplate extends StatelessWidget {
       child: Column(
         children: [
           TextFieldFormMolecule(
-            titleElement: 'E-mail',
-            inputType: TextInputType.emailAddress,
+            titleElement: 'Nombre de usuario',
+            inputType: TextInputType.name,
             onChangeValue: (value) {
-              email = value ?? '';
+              userName = value ?? '';
             },
-            iconForm: Icons.email_rounded,
-            hintTextField: 'example@gmail.com',
-            fieldValidator: 'Ingrese un e-mail válido',
+            iconForm: Icons.person_rounded,
+            fieldValidator: 'Ingrese un usuario válido',
           ),
           TextFieldFormMolecule(
               titleElement: 'Contraseña',
@@ -44,7 +43,8 @@ class LoginFormWidgetTemplate extends StatelessWidget {
             child: CustomButtonAtom(
                 onClick: () {
                   if (formKey.currentState!.validate()) {
-                    onSubmit.call(SubmitLoginModel(email: email, pass: pass));
+                    onSubmit
+                        .call(SubmitLoginModel(userName: userName, pass: pass));
                   }
                 },
                 textStyle: textStyle,

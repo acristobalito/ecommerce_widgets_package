@@ -1,3 +1,7 @@
+## 0.0.8
+
+* Login form template updated.
+
 ## 0.0.7
 
 * Last name form field added

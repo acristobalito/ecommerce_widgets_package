@@ -24,6 +24,7 @@ export 'presentation/widgets/organisms/card_list_widget_organism.dart';
 
 export 'presentation/widgets/templates/login_form_widget_template.dart';
 export 'presentation/widgets/templates/search_view_widget_template.dart';
+export 'presentation/widgets/templates/sign_up_form_widget_template.dart';
 
 export 'presentation/widgets/pages/search_view_widget_page.dart';
 
