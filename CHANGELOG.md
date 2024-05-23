@@ -1,3 +1,7 @@
+## 0.0.9
+
+* Email fiel validate added.
+
 ## 0.0.8
 
 * Login form template updated.

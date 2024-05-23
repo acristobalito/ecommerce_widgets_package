@@ -1,4 +1,5 @@
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
+import 'package:ecommerce_widgets_package/presentation/widgets/extensions/string_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -47,6 +48,8 @@ class CustomTextFieldAtom extends StatelessWidget {
         },
         inputFormatters: inputFormaters,
         validator: (value) =>
-            (value == null || value.isEmpty) ? fieldValidator : null);
+            (value == null || value.isEmpty || !value.isValid(keyBoardType))
+                ? fieldValidator
+                : null);
   }
 }
