@@ -16,9 +16,9 @@ class SearchViewWidgetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SearchViewWidgetTemplate(
-      onSearch: () => onSearch.call(),
+      onSearch: (value) => onSearch.call(),
       products: products,
-      onProductClicked: () => onProductClicked.call(),
+      onProductClicked: (product) => onProductClicked.call(),
     );
   }
 }

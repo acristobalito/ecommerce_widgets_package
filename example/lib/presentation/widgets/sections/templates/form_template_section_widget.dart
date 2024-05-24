@@ -8,6 +8,7 @@ class FormTemplateSectionWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return LoginFormWidgetTemplate(
       onSubmit: (submit) {},
+      isLoading: false,
     );
   }
 }

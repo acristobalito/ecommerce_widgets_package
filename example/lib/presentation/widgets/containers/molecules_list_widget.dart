@@ -1,4 +1,5 @@
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
+import 'package:example/presentation/widgets/sections/molecules/cart_icon_molecule_section_widget.dart';
 import 'package:example/presentation/widgets/sections/sections.dart';
 import 'package:flutter/material.dart';
 
@@ -24,6 +25,19 @@ class MoleculesListWidget extends StatelessWidget {
                 height: 5,
               ),
               NavigationMoleculeSectionWidget(),
+              SizedBox(
+                height: 10,
+              ),
+              CustomTextAtom(
+                text: 'CART ICON',
+                style: TextStyle(
+                    color: FoundationColors.txtSecondaryColor,
+                    fontWeight: FontWeight.w500),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              CartIconMoleculeSectionWidget(),
               SizedBox(
                 height: 10,
               ),

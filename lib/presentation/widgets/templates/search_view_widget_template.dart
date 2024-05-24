@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 /// Custom search view template that receives [onSearch], [onProductClicked] and [products] as parameters.
 class SearchViewWidgetTemplate extends StatelessWidget {
-  final VoidCallback onSearch;
-  final VoidCallback onProductClicked;
+  final Function(String?) onSearch;
+  final Function(ProductModel) onProductClicked;
   final List<ProductModel> products;
   const SearchViewWidgetTemplate(
       {super.key,
@@ -18,7 +18,7 @@ class SearchViewWidgetTemplate extends StatelessWidget {
       children: [
         CustomTextFieldAtom(
           onChangeValue: (value) {
-            onSearch.call();
+            onSearch.call(value);
           },
           hintText: 'Busca un producto',
           keyBoardType: TextInputType.text,
@@ -30,7 +30,7 @@ class SearchViewWidgetTemplate extends StatelessWidget {
         Expanded(
           child: CardListWidgetOrganism(
             products: products,
-            onClickItem: () => onProductClicked.call(),
+            onClickItem: (product) => onProductClicked.call(product),
           ),
         )
       ],

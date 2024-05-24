@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 /// Custom navigation widget organism that receives [onTap], [items] and [currentIndex] as parameters.
 class CardListWidgetOrganism extends StatelessWidget {
   final List<ProductModel> products;
-  final VoidCallback onClickItem;
+  final Function(ProductModel) onClickItem;
   const CardListWidgetOrganism(
       {super.key, required this.products, required this.onClickItem});
 
@@ -17,7 +17,7 @@ class CardListWidgetOrganism extends StatelessWidget {
           crossAxisCount: 2, childAspectRatio: 0.69),
       itemBuilder: (BuildContext context, int index) => CardItemMolecule(
         product: products[index],
-        onClick: () {},
+        onClick: () => onClickItem.call(products[index]),
       ),
       itemCount: products.length,
     );

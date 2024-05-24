@@ -3,13 +3,18 @@ import 'package:ecommerce_widgets_package/presentation/widgets/atoms/custom_butt
 import 'package:ecommerce_widgets_package/presentation/widgets/molecules/text_field_form_molecule.dart';
 import 'package:flutter/material.dart';
 
-/// Custom login form template widget that receives [onSubmit] as parameters.
+/// Custom login form template widget that receives [textStyle], [btnStyle], [isLoading] and [onSubmit] as parameters.
 class LoginFormWidgetTemplate extends StatelessWidget {
   final TextStyle? textStyle;
   final ButtonStyle? btnStyle;
+  final bool isLoading;
   final Function(SubmitLoginModel) onSubmit;
   const LoginFormWidgetTemplate(
-      {super.key, required this.onSubmit, this.textStyle, this.btnStyle});
+      {super.key,
+      required this.onSubmit,
+      this.textStyle,
+      this.btnStyle,
+      required this.isLoading});
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +46,7 @@ class LoginFormWidgetTemplate extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             width: double.infinity,
             child: CustomButtonAtom(
+                isEnable: !isLoading,
                 onClick: () {
                   if (formKey.currentState!.validate()) {
                     onSubmit

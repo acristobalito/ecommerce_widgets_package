@@ -14,13 +14,17 @@ class ButtonsAtomSectionWidget extends StatelessWidget {
         crossAxisAlignment: WrapCrossAlignment.center,
         children: [
           CustomButtonAtom(
-            onClick: () {},
+            isEnable: false,
+            onClick: () {
+              print('Clicked');
+            },
             text: 'Iniciar sesión',
             btnStyle: const ButtonStyle(
                 backgroundColor:
                     WidgetStatePropertyAll(FoundationColors.successBgColor)),
           ),
           CustomButtonAtom(
+            isEnable: false,
             onClick: () {},
             text: 'Registrarse',
             btnStyle: const ButtonStyle(
@@ -28,6 +32,7 @@ class ButtonsAtomSectionWidget extends StatelessWidget {
                     WidgetStatePropertyAll(FoundationColors.warningBgColor)),
           ),
           CustomButtonAtom(
+            isEnable: false,
             onClick: () {},
             text: 'Cancelar',
             btnStyle: const ButtonStyle(

@@ -54,9 +54,9 @@ class ListProductTemplateSectionWidget extends StatelessWidget {
           category: '')
     ];
     return SearchViewWidgetTemplate(
-      onSearch: () {},
+      onSearch: (value) {},
       products: products,
-      onProductClicked: () {},
+      onProductClicked: (product) {},
     );
   }
 }

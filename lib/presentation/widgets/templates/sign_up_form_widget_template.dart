@@ -2,12 +2,18 @@ import 'package:ecommerce_widgets_package/domain/model/submit_sign_up_model.dart
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
 import 'package:flutter/material.dart';
 
+/// Custom login form template widget that receives [textStyle], [btnStyle], [isLoading] and [onSubmit] as parameters.
 class SignUpFormWidgetTemplate extends StatelessWidget {
   final TextStyle? textStyle;
   final ButtonStyle? btnStyle;
   final Function(SubmitSignUpModel) onSubmit;
+  final bool isLoading;
   const SignUpFormWidgetTemplate(
-      {super.key, this.textStyle, this.btnStyle, required this.onSubmit});
+      {super.key,
+      this.textStyle,
+      this.btnStyle,
+      required this.onSubmit,
+      required this.isLoading});
 
   @override
   Widget build(BuildContext context) {
@@ -80,6 +86,7 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             width: double.infinity,
             child: CustomButtonAtom(
+                isEnable: !isLoading,
                 onClick: () {
                   if (formKey.currentState!.validate()) {
                     onSubmit.call(SubmitSignUpModel(

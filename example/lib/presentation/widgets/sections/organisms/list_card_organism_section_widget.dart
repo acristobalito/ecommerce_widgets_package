@@ -54,7 +54,7 @@ class ListCardOrganismSectionWidget extends StatelessWidget {
           category: '')
     ];
     return CardListWidgetOrganism(
-      onClickItem: () {},
+      onClickItem: (product) {},
       products: products,
     );
   }

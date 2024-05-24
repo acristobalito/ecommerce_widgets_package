@@ -1,3 +1,7 @@
+## 0.0.10
+
+* Button loading state added, new widgets added.
+
 ## 0.0.9
 
 * Email fiel validate added.

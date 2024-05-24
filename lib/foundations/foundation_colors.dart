@@ -11,4 +11,5 @@ class FoundationColors {
   static const Color btnAlternativeBgColor = TokenColors.scale04;
   static const Color txtSecondaryColor = TokenColors.errorColor;
   static const Color customButtonAddedBgColor = TokenColors.greyColor;
+  static const Color disableBtnColor = TokenColors.greyColor;
 }
