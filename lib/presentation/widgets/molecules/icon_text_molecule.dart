@@ -8,16 +8,20 @@ class IconTextMolecule extends StatelessWidget {
   final String text;
   final double size;
   final double spicing;
+  final bool alignCenter;
   const IconTextMolecule(
       {super.key,
       required this.icon,
       required this.text,
       this.size = 15,
+      this.alignCenter = false,
       this.spicing = 0});
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment:
+          alignCenter ? MainAxisAlignment.center : MainAxisAlignment.start,
       children: [
         IconAtom(
           icon: icon,

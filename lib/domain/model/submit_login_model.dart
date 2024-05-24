@@ -1,3 +1,4 @@
+/// Model used for **LoginFormWidgetTemplate**
 class SubmitLoginModel {
   final String userName;
   final String pass;

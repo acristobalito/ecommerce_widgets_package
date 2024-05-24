@@ -1,3 +1,7 @@
+## 0.0.11
+
+* Pages widgets added.
+
 ## 0.0.10
 
 * Button loading state added, new widgets added.

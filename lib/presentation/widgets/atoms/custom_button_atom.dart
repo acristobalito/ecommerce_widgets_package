@@ -25,7 +25,7 @@ class CustomButtonAtom extends StatelessWidget {
             backgroundColor:
                 WidgetStatePropertyAll(FoundationColors.disableBtnColor));
     final finalTextStyle =
-        isEnable ? textStyle : TextStyle(color: Colors.grey[300]);
+        isEnable ? textStyle : textStyle?.copyWith(color: Colors.white);
     return FilledButton(
       onPressed: () => isEnable ? onClick.call() : null,
       style: btnBgColor,

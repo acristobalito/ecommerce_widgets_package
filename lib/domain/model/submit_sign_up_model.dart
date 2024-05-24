@@ -1,3 +1,4 @@
+/// Model used for **SignUpFormWidgetTemplate**
 class SubmitSignUpModel {
   final String email;
   final String userName;

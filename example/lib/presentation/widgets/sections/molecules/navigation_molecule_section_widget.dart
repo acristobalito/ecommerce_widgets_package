@@ -8,7 +8,7 @@ class NavigationMoleculeSectionWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SizedBox(
       width: double.infinity,
-      child: NavigationItemMolecule(
+      child: IconTextVerticalMolecule(
         icon: Icons.contact_support_rounded,
         itemName: 'Soporte',
       ),

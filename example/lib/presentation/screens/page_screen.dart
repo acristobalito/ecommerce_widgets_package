@@ -1,5 +1,5 @@
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
-import 'package:example/presentation/widgets/containers/page_view_widget.dart';
+import 'package:example/presentation/widgets/containers/cart_page_view.dart';
 import 'package:flutter/material.dart';
 
 class PageScreen extends StatelessWidget {
@@ -21,7 +21,7 @@ class PageScreen extends StatelessWidget {
               fontWeight: FontWeight.bold),
         ),
       ),
-      body: const PageViewWidget(),
+      body: const CartPageView(),
     );
   }
 }

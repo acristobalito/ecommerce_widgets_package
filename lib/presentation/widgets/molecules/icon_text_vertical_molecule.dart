@@ -2,10 +2,10 @@ import 'package:ecommerce_widgets_package/presentation/widgets/atoms/icon_atom.d
 import 'package:flutter/material.dart';
 
 /// Navigation item widget molecule that receives [icon] and [itemName] as parameters.
-class NavigationItemMolecule extends StatelessWidget {
+class IconTextVerticalMolecule extends StatelessWidget {
   final IconData icon;
   final String itemName;
-  const NavigationItemMolecule(
+  const IconTextVerticalMolecule(
       {super.key, required this.icon, required this.itemName});
 
   @override
