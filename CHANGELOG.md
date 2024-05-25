@@ -1,3 +1,7 @@
+## 0.0.13
+
+* Custom drop down atom updated.
+
 ## 0.0.12
 
 * Widgets features updated.
