@@ -1,3 +1,7 @@
+## 0.0.12
+
+* Widgets features updated.
+
 ## 0.0.11
 
 * Pages widgets added.

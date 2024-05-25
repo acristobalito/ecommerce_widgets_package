@@ -43,6 +43,7 @@ class TextFieldFormMolecule extends StatelessWidget {
             height: 5,
           ),
           CustomTextFieldAtom(
+            onTapContainer: () {},
             onChangeValue: (value) => onChangeValue.call(value),
             hintText: hintTextField,
             keyBoardType: inputType,

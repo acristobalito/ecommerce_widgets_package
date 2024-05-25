@@ -14,7 +14,7 @@ class NavigationOrganismSectionWidget extends StatelessWidget {
           icon: IconAtom(icon: Icons.home_rounded, size: 30), label: 'Home'),
     ];
     return NavigationWidgetOrganism(
-      onTap: () {},
+      onTap: (_) {},
       items: items,
     );
   }

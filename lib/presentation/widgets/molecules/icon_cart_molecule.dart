@@ -24,18 +24,18 @@ class IconCartMolecule extends StatelessWidget {
                 const Column(
                   children: [
                     SizedBox(
-                      height: 8,
+                      height: 3,
                     ),
                     IconAtom(
                       icon: Icons.shopping_cart_rounded,
-                      size: 30,
+                      size: 25,
                       colorIcon: FoundationColors.btnAlternativeBgColor,
                     )
                   ],
                 ),
                 Container(
-                  width: 20,
-                  height: 20,
+                  width: 15,
+                  height: 15,
                   alignment: Alignment.center,
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle, color: Colors.white),
@@ -43,7 +43,7 @@ class IconCartMolecule extends StatelessWidget {
                   child: CustomTextAtom(
                     text: cartCount,
                     style: const TextStyle(
-                        fontSize: 9, fontWeight: FontWeight.bold),
+                        fontSize: 8, fontWeight: FontWeight.bold),
                   ),
                 )
               ],

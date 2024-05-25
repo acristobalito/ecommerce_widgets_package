@@ -9,6 +9,7 @@ class TextFieldsAtomSectionWidgets extends StatelessWidget {
     return Column(
       children: [
         CustomTextFieldAtom(
+          onTapContainer: () {},
           onChangeValue: (value) {},
           hintText: 'Campo email',
           keyBoardType: TextInputType.emailAddress,
@@ -17,6 +18,7 @@ class TextFieldsAtomSectionWidgets extends StatelessWidget {
           height: 10,
         ),
         CustomTextFieldAtom(
+          onTapContainer: () {},
           onChangeValue: (value) {},
           hintText: 'Campo password',
           keyBoardType: TextInputType.visiblePassword,

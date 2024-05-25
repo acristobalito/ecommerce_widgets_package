@@ -17,6 +17,7 @@ class SearchViewWidgetTemplate extends StatelessWidget {
     return Column(
       children: [
         CustomTextFieldAtom(
+          onTapContainer: () {},
           onChangeValue: (value) {
             onSearch.call(value);
           },

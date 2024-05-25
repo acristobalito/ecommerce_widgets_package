@@ -3,7 +3,7 @@ import 'package:ecommerce_widgets_package/presentation/widgets/extensions/string
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-/// Custom text flied atom that receives [hintText], [prefixIcon], [keyBoardType], [onChangeValue] and [inputFormaters] as parameters.
+/// Custom text flied atom that receives [hintText], [prefixIcon], [keyBoardType], [onChangeValue], [inputFormaters], [readOnly] and [onTapContainer] as parameters.
 class CustomTextFieldAtom extends StatelessWidget {
   final String? hintText;
   final String? fieldValidator;
@@ -11,6 +11,8 @@ class CustomTextFieldAtom extends StatelessWidget {
   final Widget? prefixIcon;
   final Function(String?) onChangeValue;
   final List<TextInputFormatter>? inputFormaters;
+  final bool readOnly;
+  final VoidCallback onTapContainer;
   const CustomTextFieldAtom(
       {super.key,
       this.hintText,
@@ -18,7 +20,9 @@ class CustomTextFieldAtom extends StatelessWidget {
       required this.onChangeValue,
       this.inputFormaters,
       this.prefixIcon,
-      this.fieldValidator});
+      this.fieldValidator,
+      this.readOnly = false,
+      required this.onTapContainer});
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +39,9 @@ class CustomTextFieldAtom extends StatelessWidget {
         focusedBorder: outlinedInputBorder,
         filled: true);
     return TextFormField(
+        onTap: () => onTapContainer.call(),
+        readOnly: readOnly,
+        showCursor: !readOnly,
         obscureText:
             (keyBoardType == TextInputType.visiblePassword) ? true : false,
         style: const TextStyle(fontFamily: FoundationTypo.font),
