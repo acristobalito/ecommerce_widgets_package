@@ -6,8 +6,8 @@ class CatalogPageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<ProductModel> products = [
-      ProductModel(
+    List<ProductWidgetModel> products = [
+      ProductWidgetModel(
           id: 1,
           title: 'Prueba',
           price: 2000,
@@ -15,8 +15,8 @@ class CatalogPageWidget extends StatelessWidget {
           category: 'Prueba',
           image:
               'https://www.libreriahuequito.com/public/images/productos/default.png',
-          rating: RatingModel(rate: 4.5, count: 100)),
-      ProductModel(
+          rating: RatingWidgetModel(rate: 4.5, count: 100)),
+      ProductWidgetModel(
           id: 1,
           title: 'Prueba',
           price: 2000,
@@ -24,7 +24,7 @@ class CatalogPageWidget extends StatelessWidget {
           category: 'Prueba',
           image:
               'https://www.libreriahuequito.com/public/images/productos/default.png',
-          rating: RatingModel(rate: 4.5, count: 100))
+          rating: RatingWidgetModel(rate: 4.5, count: 100))
     ];
     final categories = ['Aasadsad', 'Asdsadasdas', 'Aassdfadas', 'Asadasdas'];
     return CatalogViewWidgetTemplate(

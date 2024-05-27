@@ -1,4 +1,4 @@
-import 'package:ecommerce_widgets_package/domain/model/submit_sign_up_model.dart';
+import 'package:ecommerce_widgets_package/domain/model/submit_sign_up_widget_model.dart';
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
 import 'package:flutter/material.dart';
 
@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class SignUpFormWidgetTemplate extends StatelessWidget {
   final TextStyle? textStyle;
   final ButtonStyle? btnStyle;
-  final Function(SubmitSignUpModel) onSubmit;
+  final Function(SubmitSignUpWidgetModel) onSubmit;
   final bool isLoading;
   const SignUpFormWidgetTemplate(
       {super.key,
@@ -89,7 +89,7 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
                 isEnable: !isLoading,
                 onClick: () {
                   if (formKey.currentState!.validate()) {
-                    onSubmit.call(SubmitSignUpModel(
+                    onSubmit.call(SubmitSignUpWidgetModel(
                         email: email,
                         userName: userName,
                         password: pass,

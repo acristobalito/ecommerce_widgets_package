@@ -36,5 +36,5 @@ export 'presentation/widgets/templates/cart_view_widget_template.dart';
 export 'presentation/widgets/pages/search_view_widget_page.dart';
 export 'presentation/widgets/pages/contact_view_widget_page.dart';
 
-export './domain/model/product_model.dart';
-export './domain/model/rating_model.dart';
+export 'domain/model/product_widget_model.dart';
+export 'domain/model/rating_widget_model.dart';

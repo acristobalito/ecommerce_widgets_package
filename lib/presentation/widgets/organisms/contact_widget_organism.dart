@@ -1,10 +1,10 @@
-import 'package:ecommerce_widgets_package/domain/model/contact_model.dart';
+import 'package:ecommerce_widgets_package/domain/model/contact_widget_model.dart';
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
 import 'package:flutter/material.dart';
 
 /// Custom contact widget organism that receives [contact] as parameters.
 class ContactWidgetOrganism extends StatelessWidget {
-  final ContactModel contact;
+  final ContactWidgetModel contact;
   const ContactWidgetOrganism({super.key, required this.contact});
 
   @override

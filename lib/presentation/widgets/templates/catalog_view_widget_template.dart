@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 /// Custom login form template widget that receives [products], [categories], [onProductClicked] and [onCategorySelected] as parameters.
 class CatalogViewWidgetTemplate extends StatelessWidget {
-  final List<ProductModel> products;
+  final List<ProductWidgetModel> products;
   final List<String> categories;
-  final Function(ProductModel) onProductClicked;
+  final Function(ProductWidgetModel) onProductClicked;
   final Function(String) onCategorySelected;
   const CatalogViewWidgetTemplate(
       {super.key,

@@ -6,13 +6,13 @@ class CardMoleculeSectionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final product = ProductModel(
+    final product = ProductWidgetModel(
         id: 1,
         title: 'Titulo del producto',
         image:
             'https://www.libreriahuequito.com/public/images/productos/default.png',
         price: 1000,
-        rating: RatingModel(rate: 5, count: 100),
+        rating: RatingWidgetModel(rate: 5, count: 100),
         description: '',
         category: '');
     return CardItemMolecule(

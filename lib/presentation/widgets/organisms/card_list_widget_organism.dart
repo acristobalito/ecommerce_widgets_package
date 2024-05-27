@@ -1,11 +1,11 @@
 import 'package:ecommerce_widgets_package/presentation/widgets/molecules/card_item_molecule.dart';
-import 'package:ecommerce_widgets_package/domain/model/product_model.dart';
+import 'package:ecommerce_widgets_package/domain/model/product_widget_model.dart';
 import 'package:flutter/material.dart';
 
 /// Custom navigation widget organism that receives [onTap], [items] and [currentIndex] as parameters.
 class CardListWidgetOrganism extends StatelessWidget {
-  final List<ProductModel> products;
-  final Function(ProductModel) onClickItem;
+  final List<ProductWidgetModel> products;
+  final Function(ProductWidgetModel) onClickItem;
   const CardListWidgetOrganism(
       {super.key, required this.products, required this.onClickItem});
 

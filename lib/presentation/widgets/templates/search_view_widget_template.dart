@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 /// Custom search view template that receives [onSearch], [onProductClicked] and [products] as parameters.
 class SearchViewWidgetTemplate extends StatelessWidget {
   final Function(String?) onSearch;
-  final Function(ProductModel) onProductClicked;
-  final List<ProductModel> products;
+  final Function(ProductWidgetModel) onProductClicked;
+  final List<ProductWidgetModel> products;
   const SearchViewWidgetTemplate(
       {super.key,
       required this.onSearch,

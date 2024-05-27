@@ -1,4 +1,4 @@
-import 'package:ecommerce_widgets_package/domain/model/cart_model.dart';
+import 'package:ecommerce_widgets_package/domain/model/cart_widget_model.dart';
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +10,7 @@ class CartPageView extends StatelessWidget {
     return SafeArea(
       child: CartViewWidgetTemplate(
         cartList: [
-          CartModel(
+          CartWidgetModel(
               id: 1,
               image:
                   'https://www.libreriahuequito.com/public/images/productos/default.png',

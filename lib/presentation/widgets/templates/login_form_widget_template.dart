@@ -1,4 +1,4 @@
-import 'package:ecommerce_widgets_package/domain/model/submit_login_model.dart';
+import 'package:ecommerce_widgets_package/domain/model/submit_login_widget_model.dart';
 import 'package:ecommerce_widgets_package/presentation/widgets/atoms/custom_button_atom.dart';
 import 'package:ecommerce_widgets_package/presentation/widgets/molecules/text_field_form_molecule.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +8,7 @@ class LoginFormWidgetTemplate extends StatelessWidget {
   final TextStyle? textStyle;
   final ButtonStyle? btnStyle;
   final bool isLoading;
-  final Function(SubmitLoginModel) onSubmit;
+  final Function(SubmitLoginWidgetModel) onSubmit;
   const LoginFormWidgetTemplate(
       {super.key,
       required this.onSubmit,
@@ -49,8 +49,8 @@ class LoginFormWidgetTemplate extends StatelessWidget {
                 isEnable: !isLoading,
                 onClick: () {
                   if (formKey.currentState!.validate()) {
-                    onSubmit
-                        .call(SubmitLoginModel(userName: userName, pass: pass));
+                    onSubmit.call(
+                        SubmitLoginWidgetModel(userName: userName, pass: pass));
                   }
                 },
                 textStyle: textStyle,

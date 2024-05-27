@@ -1,12 +1,12 @@
 /// Model used for **CartViewWidgetTemplate**
-class CartModel {
+class CartWidgetModel {
   final int id;
   final String image;
   final String nameProduct;
   final double price;
   final int quantity;
 
-  CartModel(
+  CartWidgetModel(
       {required this.id,
       required this.image,
       required this.nameProduct,

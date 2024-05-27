@@ -1,10 +1,10 @@
-import 'package:ecommerce_widgets_package/domain/model/cart_model.dart';
+import 'package:ecommerce_widgets_package/domain/model/cart_widget_model.dart';
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
 import 'package:flutter/material.dart';
 
 /// Navigation item widget molecule that receives [cartProduct], [onAddQuantity], [onSubstractQuantity] and [onRemove] as parameters.
 class CartItemMolecule extends StatelessWidget {
-  final CartModel cartProduct;
+  final CartWidgetModel cartProduct;
   final VoidCallback onAddQuantity;
   final VoidCallback onSubstractQuantity;
   final VoidCallback onRemove;

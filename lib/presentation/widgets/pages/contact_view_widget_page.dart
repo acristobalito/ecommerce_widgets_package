@@ -1,4 +1,4 @@
-import 'package:ecommerce_widgets_package/domain/model/contact_model.dart';
+import 'package:ecommerce_widgets_package/domain/model/contact_widget_model.dart';
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +8,7 @@ class ContactViewWidgetPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final contactData = ContactModel(
+    final contactData = ContactWidgetModel(
         image:
             'https://lh3.googleusercontent.com/a/ACg8ocLBWJORaQFE3hlH8CcAEDak3I0dAvGrJfYTH2hHeIG6TSg1Mas=s288-c-no',
         name: 'Antony Cristobal Zambrano',

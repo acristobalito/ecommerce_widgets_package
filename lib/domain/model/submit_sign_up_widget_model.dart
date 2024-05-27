@@ -1,5 +1,5 @@
 /// Model used for **SignUpFormWidgetTemplate**
-class SubmitSignUpModel {
+class SubmitSignUpWidgetModel {
   final String email;
   final String userName;
   final String password;
@@ -7,7 +7,7 @@ class SubmitSignUpModel {
   final String lastName;
   final String phone;
 
-  SubmitSignUpModel(
+  SubmitSignUpWidgetModel(
       {required this.email,
       required this.userName,
       required this.password,

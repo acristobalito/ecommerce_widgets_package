@@ -1,5 +1,5 @@
 /// Model used for **ContactViewWidgetTemplate**
-class ContactModel {
+class ContactWidgetModel {
   final String image;
   final String name;
   final String occupation;
@@ -8,7 +8,7 @@ class ContactModel {
   final String address;
   final String country;
 
-  ContactModel(
+  ContactWidgetModel(
       {required this.image,
       required this.name,
       required this.occupation,

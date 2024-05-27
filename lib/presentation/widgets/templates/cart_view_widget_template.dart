@@ -1,13 +1,13 @@
-import 'package:ecommerce_widgets_package/domain/model/cart_model.dart';
+import 'package:ecommerce_widgets_package/domain/model/cart_widget_model.dart';
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
 import 'package:flutter/material.dart';
 
 /// Custom cart view template widget that receives [cartList], [onAddQuantity], [onSubstractQuantity], [onRemove], [onClickBuyNow] and [priceTotal] as parameters.
 class CartViewWidgetTemplate extends StatelessWidget {
-  final List<CartModel> cartList;
-  final Function(CartModel) onAddQuantity;
-  final Function(CartModel) onSubstractQuantity;
-  final Function(CartModel) onRemove;
+  final List<CartWidgetModel> cartList;
+  final Function(CartWidgetModel) onAddQuantity;
+  final Function(CartWidgetModel) onSubstractQuantity;
+  final Function(CartWidgetModel) onRemove;
   final VoidCallback onClickBuyNow;
   final double priceTotal;
   final ButtonStyle? btnStyle;

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 /// Custom navigation widget organism that receives [product] as parameters.
 class ProductDetailWidgtetOrganism extends StatelessWidget {
-  final ProductModel product;
+  final ProductWidgetModel product;
   const ProductDetailWidgtetOrganism({super.key, required this.product});
 
   @override

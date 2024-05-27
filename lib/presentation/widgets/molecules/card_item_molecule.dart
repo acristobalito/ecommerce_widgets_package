@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 /// Card widget molecule that receives [product] and [onClick] as parameters.
 class CardItemMolecule extends StatelessWidget {
-  final ProductModel product;
+  final ProductWidgetModel product;
   final VoidCallback onClick;
   const CardItemMolecule(
       {super.key, required this.product, required this.onClick});

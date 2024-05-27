@@ -1,4 +1,4 @@
-import 'package:ecommerce_widgets_package/domain/model/cart_model.dart';
+import 'package:ecommerce_widgets_package/domain/model/cart_widget_model.dart';
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
 import 'package:example/presentation/widgets/sections/molecules/cart_icon_molecule_section_widget.dart';
 import 'package:example/presentation/widgets/sections/molecules/cart_item_molecule_section_widget.dart';
@@ -53,7 +53,7 @@ class MoleculesListWidget extends StatelessWidget {
                 height: 5,
               ),
               CartItemMoleculeSectionWidget(
-                cartProduct: CartModel(
+                cartProduct: CartWidgetModel(
                     id: 1,
                     image:
                         'https://www.libreriahuequito.com/public/images/productos/default.png',

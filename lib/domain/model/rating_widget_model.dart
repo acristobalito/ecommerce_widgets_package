@@ -1,9 +1,9 @@
 /// Model used for **ProductModel**
-class RatingModel {
+class RatingWidgetModel {
   double rate;
   int count;
 
-  RatingModel({
+  RatingWidgetModel({
     required this.rate,
     required this.count,
   });

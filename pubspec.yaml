@@ -1,6 +1,6 @@
 name: ecommerce_widgets_package
 description: "E-commerce widgets package project"
-version: 0.0.13
+version: 0.0.14
 homepage: https://github.com/acristobalito/ecommerce_widgets_package
 
 environment:
