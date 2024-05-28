@@ -28,6 +28,7 @@ class CatalogPageWidget extends StatelessWidget {
     ];
     final categories = ['Aasadsad', 'Asdsadasdas', 'Aassdfadas', 'Asadasdas'];
     return CatalogViewWidgetTemplate(
+      isEnable: true,
       products: products,
       categories: categories,
       onProductClicked: (p0) {},

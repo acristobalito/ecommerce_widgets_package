@@ -6,10 +6,12 @@ import 'package:flutter/material.dart';
 class CustomDropDownMenuAtom extends StatelessWidget {
   final List<String> categoryList;
   final Function(String) onCategorySelected;
+  final bool isEnable;
   const CustomDropDownMenuAtom(
       {super.key,
       required this.categoryList,
-      required this.onCategorySelected});
+      required this.onCategorySelected,
+      required this.isEnable});
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +25,16 @@ class CustomDropDownMenuAtom extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
           ),
           DropdownMenu(
+              enabled: isEnable,
+              width: 250,
               textStyle: const TextStyle(
                   fontFamily: FoundationTypo.font, fontSize: 15),
               inputDecorationTheme: InputDecorationTheme(
                   enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(40),
+                    borderSide: BorderSide(color: Colors.grey[200]!, width: 2),
+                  ),
+                  disabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(40),
                     borderSide: BorderSide(color: Colors.grey[200]!, width: 2),
                   ),

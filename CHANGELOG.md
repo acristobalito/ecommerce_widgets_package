@@ -1,3 +1,7 @@
+## 0.0.16
+
+* Catalog widget upgraded.
+
 ## 0.0.15
 
 * Rating model renamed.

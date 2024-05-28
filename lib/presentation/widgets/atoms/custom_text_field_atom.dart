@@ -12,7 +12,7 @@ class CustomTextFieldAtom extends StatelessWidget {
   final Function(String?) onChangeValue;
   final List<TextInputFormatter>? inputFormaters;
   final bool readOnly;
-  final VoidCallback onTapContainer;
+  final VoidCallback? onTapContainer;
   const CustomTextFieldAtom(
       {super.key,
       this.hintText,
@@ -22,7 +22,7 @@ class CustomTextFieldAtom extends StatelessWidget {
       this.prefixIcon,
       this.fieldValidator,
       this.readOnly = false,
-      required this.onTapContainer});
+      this.onTapContainer});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class CustomTextFieldAtom extends StatelessWidget {
         focusedBorder: outlinedInputBorder,
         filled: true);
     return TextFormField(
-        onTap: () => onTapContainer.call(),
+        onTap: () => onTapContainer?.call(),
         readOnly: readOnly,
         showCursor: !readOnly,
         obscureText:
