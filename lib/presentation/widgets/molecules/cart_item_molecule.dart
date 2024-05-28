@@ -24,7 +24,10 @@ class CartItemMolecule extends StatelessWidget {
           clipBehavior: Clip.hardEdge,
           child: Row(
             children: [
-              ImageAtom(width: 100, image: cartProduct.image),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: ImageAtom(width: 100, image: cartProduct.image),
+              ),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),

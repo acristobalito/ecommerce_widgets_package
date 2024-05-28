@@ -37,6 +37,9 @@ class CartViewWidgetTemplate extends StatelessWidget {
                   onSubstractQuantity.call(cartList[index]),
               onRemove: () => onRemove.call(cartList[index])),
         )),
+        const SizedBox(
+          height: 20,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -45,7 +48,7 @@ class CartViewWidgetTemplate extends StatelessWidget {
               style: TextStyle(fontSize: 18),
             ),
             CustomTextAtom(
-              text: '\$ $priceTotal',
+              text: '\$ ${priceTotal.toStringAsFixed(2)}',
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
           ],

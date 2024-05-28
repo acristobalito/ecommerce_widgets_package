@@ -1,3 +1,7 @@
+## 0.0.17
+
+* Cart view template updated.
+
 ## 0.0.16
 
 * Catalog widget upgraded.
