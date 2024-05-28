@@ -1,3 +1,7 @@
+## 0.0.15
+
+* Rating model renamed.
+
 ## 0.0.14
 
 * Models renamed caused by conflicts.

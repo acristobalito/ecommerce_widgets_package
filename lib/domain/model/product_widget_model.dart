@@ -1,4 +1,5 @@
 import 'package:ecommerce_widgets_package/domain/model/rating_widget_model.dart';
+import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
 
 /// Model used for **CardItemMolecule**
 class ProductWidgetModel {
@@ -8,7 +9,7 @@ class ProductWidgetModel {
   String description;
   String category;
   String image;
-  RatingModel rating;
+  RatingWidgetModel rating;
 
   ProductWidgetModel({
     required this.id,
