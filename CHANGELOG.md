@@ -1,3 +1,7 @@
+## 0.1.0
+
+* Update version.
+
 ## 0.0.18
 
 * Forms widget templates updated.
