@@ -43,6 +43,9 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
             colorIcon: colorIcon,
             textStyleForm: textStyleForm,
           ),
+          const SizedBox(
+            height: 10,
+          ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa tu apellido',
             inputType: TextInputType.name,
@@ -53,6 +56,9 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
             fieldValidator: 'Ingrese un apellido válido',
             colorIcon: colorIcon,
             textStyleForm: textStyleForm,
+          ),
+          const SizedBox(
+            height: 10,
           ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa tu E-mail',
@@ -66,6 +72,9 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
             colorIcon: colorIcon,
             textStyleForm: textStyleForm,
           ),
+          const SizedBox(
+            height: 10,
+          ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa tu número de teléfono',
             inputType: TextInputType.phone,
@@ -76,6 +85,9 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
             fieldValidator: 'Ingrese un teléfono válido',
             colorIcon: colorIcon,
             textStyleForm: textStyleForm,
+          ),
+          const SizedBox(
+            height: 10,
           ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa un nombre de usuario',
@@ -88,6 +100,9 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
             colorIcon: colorIcon,
             textStyleForm: textStyleForm,
           ),
+          const SizedBox(
+            height: 10,
+          ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa una contraseña',
             onChangeValue: (value) {
@@ -98,6 +113,9 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
             fieldValidator: 'Ingrese una contraseña válida',
             colorIcon: colorIcon,
             textStyleForm: textStyleForm,
+          ),
+          const SizedBox(
+            height: 20,
           ),
           SizedBox(
             width: double.infinity,

@@ -1,3 +1,7 @@
+## 0.1.2
+
+* Paddings added into filed forms.
+
 ## 0.1.1
 
 * Paddings fixed.

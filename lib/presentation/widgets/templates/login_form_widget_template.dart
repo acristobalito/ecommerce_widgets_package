@@ -41,6 +41,9 @@ class LoginFormWidgetTemplate extends StatelessWidget {
             colorIcon: colorIcon,
             textStyleForm: textStyleForm,
           ),
+          const SizedBox(
+            height: 10,
+          ),
           TextFieldFormMolecule(
             titleElement: 'Contraseña',
             onChangeValue: (value) {
@@ -51,6 +54,9 @@ class LoginFormWidgetTemplate extends StatelessWidget {
             fieldValidator: 'Ingrese una contraseña válida',
             colorIcon: colorIcon,
             textStyleForm: textStyleForm,
+          ),
+          const SizedBox(
+            height: 20,
           ),
           SizedBox(
             width: double.infinity,
