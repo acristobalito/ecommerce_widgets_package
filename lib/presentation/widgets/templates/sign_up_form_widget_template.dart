@@ -1,10 +1,9 @@
 import 'package:ecommerce_widgets_package/domain/model/submit_sign_up_widget_model.dart';
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 /// Custom login form template widget that receives [textStyle], [btnStyle], [colorIcon], [textStyleForm], [isLoading] and [onSubmit] as parameters.
-class SignUpFormWidgetTemplate<T> extends StatelessWidget {
+class SignUpFormWidgetTemplate extends StatelessWidget {
   final TextStyle? textStyle;
   final ButtonStyle? btnStyle;
   final Color? colorIcon;
@@ -42,7 +41,7 @@ class SignUpFormWidgetTemplate<T> extends StatelessWidget {
             iconForm: Icons.person_add_alt_rounded,
             fieldValidator: 'Ingrese un nombre válido',
             colorIcon: colorIcon,
-            textStyleElement: textStyleForm,
+            textStyleForm: textStyleForm,
           ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa tu apellido',
@@ -53,7 +52,7 @@ class SignUpFormWidgetTemplate<T> extends StatelessWidget {
             iconForm: Icons.person_add_alt_rounded,
             fieldValidator: 'Ingrese un apellido válido',
             colorIcon: colorIcon,
-            textStyleElement: textStyleForm,
+            textStyleForm: textStyleForm,
           ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa tu E-mail',
@@ -65,7 +64,7 @@ class SignUpFormWidgetTemplate<T> extends StatelessWidget {
             hintTextField: 'example@gmail.com',
             fieldValidator: 'Ingrese un e-mail válido',
             colorIcon: colorIcon,
-            textStyleElement: textStyleForm,
+            textStyleForm: textStyleForm,
           ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa tu número de teléfono',
@@ -76,7 +75,7 @@ class SignUpFormWidgetTemplate<T> extends StatelessWidget {
             iconForm: Icons.phone_rounded,
             fieldValidator: 'Ingrese un teléfono válido',
             colorIcon: colorIcon,
-            textStyleElement: textStyleForm,
+            textStyleForm: textStyleForm,
           ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa un nombre de usuario',
@@ -87,7 +86,7 @@ class SignUpFormWidgetTemplate<T> extends StatelessWidget {
             iconForm: Icons.add_reaction_rounded,
             fieldValidator: 'Ingrese un nombre de usuario válido',
             colorIcon: colorIcon,
-            textStyleElement: textStyleForm,
+            textStyleForm: textStyleForm,
           ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa una contraseña',
@@ -98,28 +97,26 @@ class SignUpFormWidgetTemplate<T> extends StatelessWidget {
             iconForm: Icons.lock_rounded,
             fieldValidator: 'Ingrese una contraseña válida',
             colorIcon: colorIcon,
-            textStyleElement: textStyleForm,
+            textStyleForm: textStyleForm,
           ),
           SizedBox(
             width: double.infinity,
-            child: Consumer<T>(
-              builder: (context, _, child) => CustomButtonAtom(
-                  isEnable: !isLoading,
-                  onClick: () {
-                    if (formKey.currentState!.validate()) {
-                      onSubmit.call(SubmitSignUpWidgetModel(
-                          email: email,
-                          userName: userName,
-                          password: pass,
-                          firstName: firstName,
-                          lastName: lastName,
-                          phone: phone));
-                    }
-                  },
-                  textStyle: textStyle,
-                  btnStyle: btnStyle,
-                  text: 'Registrar'),
-            ),
+            child: CustomButtonAtom(
+                isEnable: !isLoading,
+                onClick: () {
+                  if (formKey.currentState!.validate()) {
+                    onSubmit.call(SubmitSignUpWidgetModel(
+                        email: email,
+                        userName: userName,
+                        password: pass,
+                        firstName: firstName,
+                        lastName: lastName,
+                        phone: phone));
+                  }
+                },
+                textStyle: textStyle,
+                btnStyle: btnStyle,
+                text: 'Registrar'),
           )
         ],
       ),

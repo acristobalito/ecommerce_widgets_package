@@ -1,6 +1,6 @@
 name: ecommerce_widgets_package
 description: "E-commerce widgets package project"
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/acristobalito/ecommerce_widgets_package
 
 environment:
@@ -10,7 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  provider: ^6.1.2
 
 dev_dependencies:
   flutter_test:

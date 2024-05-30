@@ -2,10 +2,9 @@ import 'package:ecommerce_widgets_package/domain/model/submit_login_widget_model
 import 'package:ecommerce_widgets_package/presentation/widgets/atoms/custom_button_atom.dart';
 import 'package:ecommerce_widgets_package/presentation/widgets/molecules/text_field_form_molecule.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 /// Custom login form template widget that receives [textStyle], [btnStyle], [isLoading] and [onSubmit] as parameters.
-class LoginFormWidgetTemplate<T> extends StatelessWidget {
+class LoginFormWidgetTemplate extends StatelessWidget {
   final TextStyle? textStyle;
   final ButtonStyle? btnStyle;
   final Color? colorIcon;
@@ -40,7 +39,7 @@ class LoginFormWidgetTemplate<T> extends StatelessWidget {
             iconForm: Icons.person_rounded,
             fieldValidator: 'Ingrese un usuario válido',
             colorIcon: colorIcon,
-            textStyleElement: textStyleForm,
+            textStyleForm: textStyleForm,
           ),
           TextFieldFormMolecule(
             titleElement: 'Contraseña',
@@ -51,23 +50,21 @@ class LoginFormWidgetTemplate<T> extends StatelessWidget {
             iconForm: Icons.lock_rounded,
             fieldValidator: 'Ingrese una contraseña válida',
             colorIcon: colorIcon,
-            textStyleElement: textStyleForm,
+            textStyleForm: textStyleForm,
           ),
           SizedBox(
             width: double.infinity,
-            child: Consumer<T>(
-              builder: (context, _, child) => CustomButtonAtom(
-                  isEnable: !isLoading,
-                  onClick: () {
-                    if (formKey.currentState!.validate()) {
-                      onSubmit.call(SubmitLoginWidgetModel(
-                          userName: userName, pass: pass));
-                    }
-                  },
-                  textStyle: textStyle,
-                  btnStyle: btnStyle,
-                  text: 'Iniciar'),
-            ),
+            child: CustomButtonAtom(
+                isEnable: !isLoading,
+                onClick: () {
+                  if (formKey.currentState!.validate()) {
+                    onSubmit.call(
+                        SubmitLoginWidgetModel(userName: userName, pass: pass));
+                  }
+                },
+                textStyle: textStyle,
+                btnStyle: btnStyle,
+                text: 'Iniciar'),
           )
         ],
       ),
