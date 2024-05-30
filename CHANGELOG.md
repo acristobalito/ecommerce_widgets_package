@@ -1,3 +1,7 @@
+## 0.0.18
+
+* Forms widget templates updated.
+
 ## 0.0.17
 
 * Cart view template updated.

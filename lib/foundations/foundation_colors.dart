@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 /// Class that contains all the colors used.
 class FoundationColors {
-  static const Color primaryColor = TokenColors.branPrimary;
+  static const Color primaryColor = TokenColors.scale00;
   static const Color errorBgColor = TokenColors.errorColor;
   static const Color warningBgColor = TokenColors.warningColor;
   static const Color successBgColor = TokenColors.successColor;

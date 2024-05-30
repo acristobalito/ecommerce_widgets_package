@@ -1,11 +1,14 @@
 import 'package:ecommerce_widgets_package/domain/model/submit_sign_up_widget_model.dart';
 import 'package:ecommerce_widgets_package/ecommerce_widgets_package.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-/// Custom login form template widget that receives [textStyle], [btnStyle], [isLoading] and [onSubmit] as parameters.
-class SignUpFormWidgetTemplate extends StatelessWidget {
+/// Custom login form template widget that receives [textStyle], [btnStyle], [colorIcon], [textStyleForm], [isLoading] and [onSubmit] as parameters.
+class SignUpFormWidgetTemplate<T> extends StatelessWidget {
   final TextStyle? textStyle;
   final ButtonStyle? btnStyle;
+  final Color? colorIcon;
+  final TextStyle? textStyleForm;
   final Function(SubmitSignUpWidgetModel) onSubmit;
   final bool isLoading;
   const SignUpFormWidgetTemplate(
@@ -13,7 +16,9 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
       this.textStyle,
       this.btnStyle,
       required this.onSubmit,
-      required this.isLoading});
+      required this.isLoading,
+      this.colorIcon,
+      this.textStyleForm});
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +41,8 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
             },
             iconForm: Icons.person_add_alt_rounded,
             fieldValidator: 'Ingrese un nombre válido',
+            colorIcon: colorIcon,
+            textStyleElement: textStyleForm,
           ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa tu apellido',
@@ -45,6 +52,8 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
             },
             iconForm: Icons.person_add_alt_rounded,
             fieldValidator: 'Ingrese un apellido válido',
+            colorIcon: colorIcon,
+            textStyleElement: textStyleForm,
           ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa tu E-mail',
@@ -55,6 +64,8 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
             iconForm: Icons.email_rounded,
             hintTextField: 'example@gmail.com',
             fieldValidator: 'Ingrese un e-mail válido',
+            colorIcon: colorIcon,
+            textStyleElement: textStyleForm,
           ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa tu número de teléfono',
@@ -64,6 +75,8 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
             },
             iconForm: Icons.phone_rounded,
             fieldValidator: 'Ingrese un teléfono válido',
+            colorIcon: colorIcon,
+            textStyleElement: textStyleForm,
           ),
           TextFieldFormMolecule(
             titleElement: 'Ingresa un nombre de usuario',
@@ -73,34 +86,40 @@ class SignUpFormWidgetTemplate extends StatelessWidget {
             },
             iconForm: Icons.add_reaction_rounded,
             fieldValidator: 'Ingrese un nombre de usuario válido',
+            colorIcon: colorIcon,
+            textStyleElement: textStyleForm,
           ),
           TextFieldFormMolecule(
-              titleElement: 'Ingresa una contraseña',
-              onChangeValue: (value) {
-                pass = value ?? '';
-              },
-              inputType: TextInputType.visiblePassword,
-              iconForm: Icons.lock_rounded,
-              fieldValidator: 'Ingrese una contraseña válida'),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            titleElement: 'Ingresa una contraseña',
+            onChangeValue: (value) {
+              pass = value ?? '';
+            },
+            inputType: TextInputType.visiblePassword,
+            iconForm: Icons.lock_rounded,
+            fieldValidator: 'Ingrese una contraseña válida',
+            colorIcon: colorIcon,
+            textStyleElement: textStyleForm,
+          ),
+          SizedBox(
             width: double.infinity,
-            child: CustomButtonAtom(
-                isEnable: !isLoading,
-                onClick: () {
-                  if (formKey.currentState!.validate()) {
-                    onSubmit.call(SubmitSignUpWidgetModel(
-                        email: email,
-                        userName: userName,
-                        password: pass,
-                        firstName: firstName,
-                        lastName: lastName,
-                        phone: phone));
-                  }
-                },
-                textStyle: textStyle,
-                btnStyle: btnStyle,
-                text: 'Registrar'),
+            child: Consumer<T>(
+              builder: (context, _, child) => CustomButtonAtom(
+                  isEnable: !isLoading,
+                  onClick: () {
+                    if (formKey.currentState!.validate()) {
+                      onSubmit.call(SubmitSignUpWidgetModel(
+                          email: email,
+                          userName: userName,
+                          password: pass,
+                          firstName: firstName,
+                          lastName: lastName,
+                          phone: phone));
+                    }
+                  },
+                  textStyle: textStyle,
+                  btnStyle: btnStyle,
+                  text: 'Registrar'),
+            ),
           )
         ],
       ),

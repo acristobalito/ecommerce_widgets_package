@@ -2,9 +2,11 @@ import 'package:ecommerce_widgets_package/presentation/widgets/atoms/custom_text
 import 'package:ecommerce_widgets_package/presentation/widgets/atoms/icon_atom.dart';
 import 'package:flutter/material.dart';
 
-/// Section of rating molecule that receives [icon], [size], [spicing] and [text] as parameters.
+/// Section of rating molecule that receives [icon], [colorIcon], [textStyle], [size], [alignCenter],[spicing] and [text] as parameters.
 class IconTextMolecule extends StatelessWidget {
   final IconData icon;
+  final Color? colorIcon;
+  final TextStyle? textStyle;
   final String text;
   final double size;
   final double spicing;
@@ -15,7 +17,9 @@ class IconTextMolecule extends StatelessWidget {
       required this.text,
       this.size = 15,
       this.alignCenter = false,
-      this.spicing = 0});
+      this.spicing = 0,
+      this.colorIcon,
+      this.textStyle});
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +30,12 @@ class IconTextMolecule extends StatelessWidget {
         IconAtom(
           icon: icon,
           size: size,
+          colorIcon: colorIcon,
         ),
         SizedBox(
           width: spicing,
         ),
-        CustomTextAtom(text: text)
+        CustomTextAtom(text: text, style: textStyle)
       ],
     );
   }
