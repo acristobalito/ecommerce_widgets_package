@@ -62,6 +62,7 @@ class PageViewWidget extends StatelessWidget {
         width: double.infinity,
         padding: const EdgeInsets.all(10.0),
         child: SearchViewWidgetPage(
+          onTapSearchBar: () {},
           products: products,
           onSearch: () {},
           onProductClicked: () {},

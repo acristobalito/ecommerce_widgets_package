@@ -12,10 +12,13 @@ class CardListWidgetOrganism extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      key: const Key('GridViewOrganism'),
+      scrollDirection: Axis.vertical,
       shrinkWrap: true,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, childAspectRatio: 0.69),
       itemBuilder: (BuildContext context, int index) => CardItemMolecule(
+        key: Key('CardItemMolecule$index'),
         product: products[index],
         onClick: () => onClickItem.call(products[index]),
       ),

@@ -57,6 +57,8 @@ class CartItemMolecule extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               IconButton(
+                                  key: const Key(
+                                      'SubstractProductCartQuantityButton'),
                                   onPressed: () => onSubstractQuantity.call(),
                                   icon: Icon(
                                     (cartProduct.quantity > 1)
@@ -70,6 +72,8 @@ class CartItemMolecule extends StatelessWidget {
                                     fontWeight: FontWeight.bold),
                               ),
                               IconButton(
+                                  key:
+                                      const Key('AddProductCartQuantityButton'),
                                   onPressed: () => onAddQuantity.call(),
                                   icon: const Icon(
                                     Icons.add_circle_outline_rounded,
@@ -89,6 +93,7 @@ class CartItemMolecule extends StatelessWidget {
         Align(
             alignment: Alignment.topRight,
             child: IconButton(
+                key: const Key('RemoveProductCartButton'),
                 onPressed: () {
                   onRemove.call();
                 },

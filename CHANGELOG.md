@@ -1,3 +1,7 @@
+## 0.1.3
+
+* Widget tests integrated.
+
 ## 0.1.2
 
 * Paddings added into filed forms.

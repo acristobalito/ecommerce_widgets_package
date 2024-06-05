@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
-/// Form text field item widget molecule that receives [titleElement], [textStyleForm], [iconForm], [fieldValidator], [colorIcon], [inputType], [hintTextField], [inputFormatter] and [onChangeValue] as parameters.
+/// Form text field item widget molecule that receives [titleElement], [textStyleForm], [iconForm], [fieldValidator], [colorIcon], [inputType], [hintTextField], [inputFormatter], [onClickContainer] and [onChangeValue] as parameters.
 class TextFieldFormMolecule extends StatelessWidget {
   final String titleElement;
   final TextStyle? textStyleForm;
@@ -15,6 +15,7 @@ class TextFieldFormMolecule extends StatelessWidget {
   final Color? colorIcon;
   final List<TextInputFormatter>? inputFormatter;
   final Function(String?) onChangeValue;
+  final VoidCallback? onClickContainer;
 
   const TextFieldFormMolecule(
       {super.key,
@@ -26,7 +27,8 @@ class TextFieldFormMolecule extends StatelessWidget {
       required this.iconForm,
       this.fieldValidator,
       this.textStyleForm,
-      this.colorIcon});
+      this.colorIcon,
+      this.onClickContainer});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +47,7 @@ class TextFieldFormMolecule extends StatelessWidget {
           height: 5,
         ),
         CustomTextFieldAtom(
-          onTapContainer: () {},
+          onTapContainer: () => onClickContainer?.call(),
           onChangeValue: (value) => onChangeValue.call(value),
           hintText: hintTextField,
           keyBoardType: inputType,

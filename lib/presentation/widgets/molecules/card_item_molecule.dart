@@ -11,6 +11,7 @@ class CardItemMolecule extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      key: key,
       clipBehavior: Clip.hardEdge,
       child: InkWell(
         onTap: () => onClick.call(),
