@@ -1,3 +1,7 @@
+## 0.1.4
+
+* Quantity cart item molecule key added.
+
 ## 0.1.3
 
 * Widget tests integrated.

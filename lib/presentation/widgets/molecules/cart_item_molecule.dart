@@ -67,6 +67,7 @@ class CartItemMolecule extends StatelessWidget {
                                     color: FoundationColors.errorBgColor,
                                   )),
                               CustomTextAtom(
+                                key: const Key('QuantityProductCartText'),
                                 text: cartProduct.quantity.toString(),
                                 style: const TextStyle(
                                     fontWeight: FontWeight.bold),
