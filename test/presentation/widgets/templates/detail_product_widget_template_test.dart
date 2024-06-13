@@ -27,6 +27,7 @@ void main() {
             ],
           ))),
         )));
-    expect(find.text('Producto de prueba'), findsOneWidget);
+    expect(find.text('Producto de prueba'), findsOneWidget,
+        reason: 'Text Producto de prueba should be show');
   });
 }

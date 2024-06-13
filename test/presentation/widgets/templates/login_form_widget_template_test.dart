@@ -14,7 +14,7 @@ void main() {
       ),
     ));
     await tester.tap(find.byType(CustomButtonAtom));
-    expect(isValid, false);
+    expect(isValid, false, reason: 'On click start, is valid should be false');
   });
 
   testWidgets('On click start with valid fields should access', (tester) async {
@@ -31,6 +31,6 @@ void main() {
     await tester.enterText(userField, '123');
     await tester.enterText(passwordField, '123');
     await tester.tap(find.byType(CustomButtonAtom));
-    expect(isValid, true);
+    expect(isValid, true, reason: 'On click start, is valid should be true');
   });
 }

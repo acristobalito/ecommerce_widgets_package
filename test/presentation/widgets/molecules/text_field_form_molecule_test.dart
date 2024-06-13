@@ -16,8 +16,8 @@ void main() {
       ),
     ));
     await tester.enterText(find.byType(TextFormField), '123');
-    expect(inputValue, '123');
+    expect(inputValue, '123', reason: 'Input value should 123');
     await tester.tap(find.byType(CustomTextFieldAtom));
-    expect(containerClicked, true);
+    expect(containerClicked, true, reason: 'Container clicked return true');
   });
 }

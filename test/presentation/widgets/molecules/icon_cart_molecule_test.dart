@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   testWidgets(
-    'Click car icon',
+    'Click cart icon',
     (tester) async {
       bool clickedIcon = false;
       await tester.pumpWidget(MaterialApp(
@@ -16,7 +16,7 @@ void main() {
         ),
       ));
       await tester.tap(find.byKey(const Key("IconCartMolecule")));
-      expect(clickedIcon, true);
+      expect(clickedIcon, true, reason: 'On click cart icon return true');
     },
   );
 }

@@ -14,6 +14,6 @@ void main() {
     ));
     await tester.tap(find.byType(CustomButtonContainerAtom));
 
-    expect(clickContainerButton, true);
+    expect(clickContainerButton, true, reason: 'On click return true');
   });
 }

@@ -15,7 +15,7 @@ void main() {
     ));
     final submitButton = find.byType(CustomButtonAtom);
     await tester.tap(submitButton);
-    expect(submit, isNull);
+    expect(submit, isNull, reason: 'Submit should be null');
   });
 
   testWidgets('On submit with valid fields should access', (tester) async {
@@ -42,6 +42,6 @@ void main() {
     await tester.enterText(passField, 'Abc');
     await tester.tap(submitButton);
     await tester.pumpAndSettle();
-    expect(submit, isNotNull);
+    expect(submit, isNotNull, reason: 'Submit should not be null');
   });
 }

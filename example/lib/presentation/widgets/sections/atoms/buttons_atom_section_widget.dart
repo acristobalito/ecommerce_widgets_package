@@ -15,9 +15,7 @@ class ButtonsAtomSectionWidget extends StatelessWidget {
         children: [
           CustomButtonAtom(
             isEnable: false,
-            onClick: () {
-              print('Clicked');
-            },
+            onClick: () {},
             text: 'Iniciar sesión',
             btnStyle: const ButtonStyle(
                 backgroundColor:

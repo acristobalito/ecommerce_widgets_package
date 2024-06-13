@@ -9,6 +9,7 @@ void main() {
     await mockNetworkImages(() async => await tester.pumpWidget(MaterialApp(
         theme: ecommerceTheme,
         home: const Scaffold(body: ContactViewWidgetPage()))));
-    expect(find.text('Antony Cristobal Zambrano'), findsOneWidget);
+    expect(find.text('Antony Cristobal Zambrano'), findsOneWidget,
+        reason: 'Text should show contact name');
   });
 }

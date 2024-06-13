@@ -18,6 +18,6 @@ void main() {
     ));
     await tester.tap(find.text('CDF'));
     await tester.pumpAndSettle();
-    expect(navigationIndex, 1);
+    expect(navigationIndex, 1, reason: 'Navigation index should 1');
   });
 }

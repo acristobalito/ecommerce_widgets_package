@@ -29,14 +29,14 @@ void main() {
     final removeButton = find.byKey(const Key('RemoveProductCartButton'));
     final buyButton = find.text('Comprar');
     await tester.tap(addButton);
-    expect(quantity, 1);
+    expect(quantity, 1, reason: 'Quantity should be 1');
     await tester.tap(substractButton);
-    expect(quantity, 0);
+    expect(quantity, 0, reason: 'Quantity should be 0');
     await tester.tap(addButton);
     await tester.tap(addButton);
     await tester.tap(removeButton);
-    expect(quantity, 0);
+    expect(quantity, 0, reason: 'Quantity should be 0');
     await tester.tap(buyButton);
-    expect(buyNowClicked, true);
+    expect(buyNowClicked, true, reason: 'Buy now clicked return true');
   });
 }

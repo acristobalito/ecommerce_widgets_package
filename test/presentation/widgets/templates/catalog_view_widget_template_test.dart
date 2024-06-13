@@ -37,10 +37,11 @@ void main() {
       final dropdownMenuItem = find.text('cat a').last;
       await tester.tap(dropdownMenuItem);
       await tester.pumpAndSettle();
-      expect(categorySelected, 'cat a');
+      expect(categorySelected, 'cat a',
+          reason: 'Category selected should be cat a');
       final productCard = find.byKey(const Key('CardItemMolecule0')).first;
       await tester.tap(productCard);
-      expect(productClicked, true);
+      expect(productClicked, true, reason: 'Product clicked return true');
     },
   );
 }

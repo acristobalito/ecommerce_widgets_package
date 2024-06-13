@@ -35,8 +35,9 @@ void main() {
     await tester.enterText(textFormField, "Producto");
     await tester.tap(productCard);
     await tester.tap(searchBar);
-    expect(keyWord, isNotEmpty);
-    expect(productClicked, true);
-    expect(searchBarClicked, true);
+    expect(keyWord, isNotEmpty, reason: 'Keyword should not be empty');
+    expect(productClicked, true, reason: 'Product clicked should return true');
+    expect(searchBarClicked, true,
+        reason: 'Search bar clicked should return true');
   });
 }
