@@ -19,10 +19,7 @@ class CartItemMolecule extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Semantics(
-          liveRegion: true,
-          label:
-              '${cartProduct.nameProduct} a ${cartProduct.price}, ${cartProduct.quantity} unidades agregadas al carrito',
+        MergeSemantics(
           child: Card(
             color: Colors.white,
             clipBehavior: Clip.hardEdge,
@@ -75,11 +72,17 @@ class CartItemMolecule extends StatelessWidget {
                                         color: FoundationColors.errorBgColor,
                                       )),
                                 ),
-                                CustomTextAtom(
-                                  key: const Key('QuantityProductCartText'),
-                                  text: cartProduct.quantity.toString(),
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold),
+                                Semantics(
+                                  liveRegion: true,
+                                  label:
+                                      '${cartProduct.quantity.toString()} agregadas',
+                                  excludeSemantics: true,
+                                  child: CustomTextAtom(
+                                    key: const Key('QuantityProductCartText'),
+                                    text: cartProduct.quantity.toString(),
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold),
+                                  ),
                                 ),
                                 Semantics(
                                   label: 'Agrega una unidad',

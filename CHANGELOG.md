@@ -1,3 +1,7 @@
+## 0.1.7
+
+* Semantics updgraded.
+
 ## 0.1.6
 
 * Semantics added.
