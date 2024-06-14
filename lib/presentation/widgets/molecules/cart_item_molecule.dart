@@ -58,20 +58,17 @@ class CartItemMolecule extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Semantics(
-                                excludeSemantics: false,
-                                label: 'Quita una unidad',
-                                child: IconButton(
-                                    key: const Key(
-                                        'SubstractProductCartQuantityButton'),
-                                    onPressed: () => onSubstractQuantity.call(),
-                                    icon: Icon(
-                                      (cartProduct.quantity > 1)
-                                          ? Icons.remove_circle_outline_rounded
-                                          : Icons.delete_rounded,
-                                      color: FoundationColors.errorBgColor,
-                                    )),
-                              ),
+                              IconButton(
+                                  key: const Key(
+                                      'SubstractProductCartQuantityButton'),
+                                  onPressed: () => onSubstractQuantity.call(),
+                                  icon: Icon(
+                                    (cartProduct.quantity > 1)
+                                        ? Icons.remove_circle_outline_rounded
+                                        : Icons.delete_rounded,
+                                    color: FoundationColors.errorBgColor,
+                                    semanticLabel: 'Quita una unidad',
+                                  )),
                               Semantics(
                                 liveRegion: true,
                                 label:
@@ -84,18 +81,14 @@ class CartItemMolecule extends StatelessWidget {
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
-                              Semantics(
-                                excludeSemantics: false,
-                                label: 'Agrega una unidad',
-                                child: IconButton(
-                                    key: const Key(
-                                        'AddProductCartQuantityButton'),
-                                    onPressed: () => onAddQuantity.call(),
-                                    icon: const Icon(
+                              IconButton(
+                                  key:
+                                      const Key('AddProductCartQuantityButton'),
+                                  onPressed: () => onAddQuantity.call(),
+                                  icon: const Icon(
                                       Icons.add_circle_outline_rounded,
                                       color: FoundationColors.primaryColor,
-                                    )),
-                              )
+                                      semanticLabel: 'Agrega una unidad'))
                             ],
                           ),
                         ),
@@ -109,19 +102,16 @@ class CartItemMolecule extends StatelessWidget {
         ),
         Align(
             alignment: Alignment.topRight,
-            child: Semantics(
-              excludeSemantics: false,
-              label: 'Quitar producto del carrito',
-              child: IconButton(
-                  key: const Key('RemoveProductCartButton'),
-                  onPressed: () {
-                    onRemove.call();
-                  },
-                  icon: const Icon(
-                    Icons.close_rounded,
-                    color: FoundationColors.errorBgColor,
-                  )),
-            ))
+            child: IconButton(
+                key: const Key('RemoveProductCartButton'),
+                onPressed: () {
+                  onRemove.call();
+                },
+                icon: const Icon(
+                  semanticLabel: 'Quitar producto del carrito',
+                  Icons.close_rounded,
+                  color: FoundationColors.errorBgColor,
+                )))
       ],
     );
   }

@@ -1,3 +1,7 @@
+## 0.1.10
+
+* Semantics icon added.
+
 ## 0.1.9
 
 * Semantics fixed v2.
