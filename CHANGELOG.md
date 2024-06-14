@@ -1,3 +1,7 @@
+## 0.1.6
+
+* Semantics added.
+
 ## 0.1.5
 
 * Remove print and reason added.

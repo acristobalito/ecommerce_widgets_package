@@ -19,89 +19,105 @@ class CartItemMolecule extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Card(
-          color: Colors.white,
-          clipBehavior: Clip.hardEdge,
-          child: Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: ImageAtom(width: 100, image: cartProduct.image),
-              ),
-              Expanded(
-                child: Padding(
+        Semantics(
+          liveRegion: true,
+          label:
+              '${cartProduct.nameProduct} a ${cartProduct.price}, ${cartProduct.quantity} unidades agregadas al carrito',
+          child: Card(
+            color: Colors.white,
+            clipBehavior: Clip.hardEdge,
+            child: Row(
+              children: [
+                Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      CustomTextAtom(
-                        text: cartProduct.nameProduct,
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 18),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      CustomTextAtom(
-                        text: '\$ ${cartProduct.price}',
-                        style: const TextStyle(fontSize: 15),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Material(
-                          color: TokenColors.tealColor,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              IconButton(
-                                  key: const Key(
-                                      'SubstractProductCartQuantityButton'),
-                                  onPressed: () => onSubstractQuantity.call(),
-                                  icon: Icon(
-                                    (cartProduct.quantity > 1)
-                                        ? Icons.remove_circle_outline_rounded
-                                        : Icons.delete_rounded,
-                                    color: FoundationColors.errorBgColor,
-                                  )),
-                              CustomTextAtom(
-                                key: const Key('QuantityProductCartText'),
-                                text: cartProduct.quantity.toString(),
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              IconButton(
-                                  key:
-                                      const Key('AddProductCartQuantityButton'),
-                                  onPressed: () => onAddQuantity.call(),
-                                  icon: const Icon(
-                                    Icons.add_circle_outline_rounded,
-                                    color: FoundationColors.primaryColor,
-                                  ))
-                            ],
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
+                  child: ImageAtom(width: 100, image: cartProduct.image),
                 ),
-              )
-            ],
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CustomTextAtom(
+                          text: cartProduct.nameProduct,
+                          style: const TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        CustomTextAtom(
+                          text: '\$ ${cartProduct.price}',
+                          style: const TextStyle(fontSize: 15),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Material(
+                            color: TokenColors.tealColor,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Semantics(
+                                  label: 'Quita una unidad',
+                                  child: IconButton(
+                                      key: const Key(
+                                          'SubstractProductCartQuantityButton'),
+                                      onPressed: () =>
+                                          onSubstractQuantity.call(),
+                                      icon: Icon(
+                                        (cartProduct.quantity > 1)
+                                            ? Icons
+                                                .remove_circle_outline_rounded
+                                            : Icons.delete_rounded,
+                                        color: FoundationColors.errorBgColor,
+                                      )),
+                                ),
+                                CustomTextAtom(
+                                  key: const Key('QuantityProductCartText'),
+                                  text: cartProduct.quantity.toString(),
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Semantics(
+                                  label: 'Agrega una unidad',
+                                  child: IconButton(
+                                      key: const Key(
+                                          'AddProductCartQuantityButton'),
+                                      onPressed: () => onAddQuantity.call(),
+                                      icon: const Icon(
+                                        Icons.add_circle_outline_rounded,
+                                        color: FoundationColors.primaryColor,
+                                      )),
+                                )
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
         Align(
             alignment: Alignment.topRight,
-            child: IconButton(
-                key: const Key('RemoveProductCartButton'),
-                onPressed: () {
-                  onRemove.call();
-                },
-                icon: const Icon(
-                  Icons.close_rounded,
-                  color: FoundationColors.errorBgColor,
-                )))
+            child: Semantics(
+              label: 'Quitar producto del carrito',
+              child: IconButton(
+                  key: const Key('RemoveProductCartButton'),
+                  onPressed: () {
+                    onRemove.call();
+                  },
+                  icon: const Icon(
+                    Icons.close_rounded,
+                    color: FoundationColors.errorBgColor,
+                  )),
+            ))
       ],
     );
   }
